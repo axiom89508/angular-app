@@ -39,8 +39,8 @@ export class HelloComponent implements OnInit {
       '２番目の項目です。',
       '最後の項目です。'
     ];
-    this.switch = "one";
-}
+    this.switch = 'one';
+ }
 
   today() {
     // return this.now.toLocaleString();
