@@ -1,0 +1,27 @@
+<div id="body">
+  <h1>{{title}}</h1>
+  <p [class]="styleClass">{{message}}</p>
+  <p>{{price * 1000}}</p>
+  <p>{{today()}}</p>
+  <button (click)="doClick()">Click</button>
+  <input type="text" #field1
+    (keyup)="doType(field1.value)" />
+  <p *ngIf="visible" (click)="doClick()" class="red">This is TRUE message.</p>
+  <p *ngIf="visible == false" (click)="doClick()">
+      This is FALSE message.</p>
+  <ul>
+    <li *ngFor="let item of data">{{item}}</li>
+  </ul>
+    <div [ngSwitch]="switch">
+      <p *ngSwitchCase="'one'">First paragraph!</p>
+      <p *ngSwitchCase="'two'">second paragraph!</p>
+      <p *ngSwitchCase="'three'">Third paragraph!</p>
+      <p *ngSwitchDefault>default paragraph.</p>
+    </div>
+    <select #sel (change)="doSelect(sel.value)">
+      <option>one</option>
+      <option>two</option>
+      <option>three</option>
+    </select>
+
+</div>
