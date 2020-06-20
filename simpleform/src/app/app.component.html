@@ -1,0 +1,7 @@
+<nav>
+  <a *ngFor="let path of paths" routerLinkActive="selected-item" [routerLink]="path.pathname">{{path.title}}
+  </a>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>
